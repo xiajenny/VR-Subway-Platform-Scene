@@ -69,4 +69,9 @@ public class train2 : MonoBehaviour
 
     }
 
+//	void OpenDoors(int doorNum)
+//	{
+//		
+//		transform.localPosition = new Vector3 (0, 0, 0);
+//	}
 }

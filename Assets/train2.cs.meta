@@ -5,7 +5,9 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - slowsubway: {fileID: 8300000, guid: 0e792b0f0566d41418755b451b993b9c, type: 3}
+  - chime: {fileID: 8300000, guid: 2bbdf1da10e6aa3489c644b7d13c8b2e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
