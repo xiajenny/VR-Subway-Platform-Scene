@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\movement.cs" />
      <Compile Include="Assets\Movement1.cs" />
      <Compile Include="Assets\movetrain.cs" />
      <Compile Include="Assets\multidisplay.cs" />
