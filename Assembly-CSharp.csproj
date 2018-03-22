@@ -51,15 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-     <Compile Include="Assets\movement.cs" />
      <Compile Include="Assets\Movement1.cs" />
-=======
-<<<<<<< HEAD
-     <Compile Include="Assets\Movement1.cs" />
-=======
->>>>>>> d3c35b3bbbcf90fbefc2d17c2f50078edf562a99
->>>>>>> dd5158dffcd7380405b24bf19d56c213ba7bbda2
      <Compile Include="Assets\movetrain.cs" />
      <Compile Include="Assets\multidisplay.cs" />
      <Compile Include="Assets\openDoors.cs" />

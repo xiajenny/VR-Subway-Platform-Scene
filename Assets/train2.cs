@@ -14,11 +14,14 @@ public class train2 : MonoBehaviour
     Vector3 position3 = new Vector3(-140f, 0.0f, 0.0f);
     int count = 0;
     bool play;
+	public bool doorOpen = false;
+	public bool doorClose = false;
 
-    private GameObject[] leftdoors;
-    private GameObject[] rightdoors;
-    private Vector3[] leftPosV;
-    private Vector3[] rightPosV;
+
+//    private GameObject[] leftdoors;
+//    private GameObject[] rightdoors;
+//    private Vector3[] leftPosV;
+//    private Vector3[] rightPosV;
 
     // Use this for initialization
     void Start()
@@ -29,30 +32,30 @@ public class train2 : MonoBehaviour
 
 
 
-        leftdoors = GameObject.FindGameObjectsWithTag("leftdoor");
-        rightdoors = GameObject.FindGameObjectsWithTag("rightdoor");
-
-        Debug.Log("There are " + leftdoors.Length + " left doors");
-        Debug.Log("There are " + rightdoors.Length + " right doors");
-
-        leftPosV = new Vector3[leftdoors.Length];
-        Debug.Log("There are " + leftPosV.Length + " left door array spots");
-        rightPosV = new Vector3[rightdoors.Length];
-        Debug.Log("There are " + rightPosV.Length + " right door array spots");
-
-        //Debug.Log (leftdoors [1].transform.position);
-
-        for (int i = 0; i < leftdoors.Length; i++)
-        {
-            leftPosV[i] = leftdoors[i].transform.localPosition + new Vector3(0.0085f, 0f, 0f);
-            Debug.Log(i + " leftPos =" + leftPosV[i] + "leftdoors transPos =" + leftdoors[i].transform.localPosition);
-        }
-
-        for (int i = 0; i < rightdoors.Length; i++)
-        {
-            rightPosV[i] = rightdoors[i].transform.localPosition + new Vector3(-0.0085f, 0f, 0f);
-            Debug.Log(i + " rightPos =" + rightPosV[i] + "rightdoors transPos =" + rightdoors[i].transform.localPosition);
-        }
+//        leftdoors = GameObject.FindGameObjectsWithTag("leftdoor");
+//        rightdoors = GameObject.FindGameObjectsWithTag("rightdoor");
+//
+//        Debug.Log("There are " + leftdoors.Length + " left doors");
+//        Debug.Log("There are " + rightdoors.Length + " right doors");
+//
+//        leftPosV = new Vector3[leftdoors.Length];
+//        Debug.Log("There are " + leftPosV.Length + " left door array spots");
+//        rightPosV = new Vector3[rightdoors.Length];
+//        Debug.Log("There are " + rightPosV.Length + " right door array spots");
+//
+//        //Debug.Log (leftdoors [1].transform.position);
+//
+//        for (int i = 0; i < leftdoors.Length; i++)
+//        {
+//            leftPosV[i] = leftdoors[i].transform.localPosition + new Vector3(0.0085f, 0f, 0f);
+//            Debug.Log(i + " leftPos =" + leftPosV[i] + "leftdoors transPos =" + leftdoors[i].transform.localPosition);
+//        }
+//
+//        for (int i = 0; i < rightdoors.Length; i++)
+//        {
+//            rightPosV[i] = rightdoors[i].transform.localPosition + new Vector3(-0.0085f, 0f, 0f);
+//            Debug.Log(i + " rightPos =" + rightPosV[i] + "rightdoors transPos =" + rightdoors[i].transform.localPosition);
+//        }
 
     }
 
@@ -76,17 +79,17 @@ public class train2 : MonoBehaviour
         //train at platform position, doors open, counting
         if (transform.position.x == 20f)
         {
-            for (int i = 0; i < leftdoors.Length; i++)
-            {
-                leftdoors[i].transform.position = Vector3.MoveTowards(leftdoors[i].transform.position, leftPosV[i], 0.8f * Time.deltaTime);
-                //Debug.Log (leftdoors [i].transform.position);
-            }
-
-            for (int i = 0; i < rightdoors.Length; i++)
-            {
-                rightdoors[i].transform.position = Vector3.MoveTowards(rightdoors[i].transform.position, rightPosV[i], 0.8f * Time.deltaTime);
-                //Debug.Log (leftdoors [i].transform.position);
-            }
+//            for (int i = 0; i < leftdoors.Length; i++)
+//            {
+//                leftdoors[i].transform.position = Vector3.MoveTowards(leftdoors[i].transform.position, leftPosV[i], 0.8f * Time.deltaTime);
+//                //Debug.Log (leftdoors [i].transform.position);
+//            }
+//
+//            for (int i = 0; i < rightdoors.Length; i++)
+//            {
+//                rightdoors[i].transform.position = Vector3.MoveTowards(rightdoors[i].transform.position, rightPosV[i], 0.8f * Time.deltaTime);
+//                //Debug.Log (leftdoors [i].transform.position);
+//            }
             count = count + 1;
             Debug.Log("Count" + count);
         }
