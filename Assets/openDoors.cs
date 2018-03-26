@@ -10,7 +10,7 @@ public class openDoors : MonoBehaviour {
 	private Vector3[] rightPosV;
 	private Vector3 startPos = new Vector3 (0f, 0f, 0f);
 	private bool doorOpen = false;
-	private float counter = 3.0f;
+	private float counter = 9.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -60,7 +60,7 @@ public class openDoors : MonoBehaviour {
 			Debug.Log (counter);
 		}
 
-		if (counter == 0.0f) {
+		if (counter < 0.0f) {
 
 			doorOpen = true;
 
