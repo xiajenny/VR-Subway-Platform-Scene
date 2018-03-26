@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class multidisplay : MonoBehaviour {
 
     Camera[] myCams = new Camera[4];
@@ -36,4 +37,6 @@ public class multidisplay : MonoBehaviour {
     {
         Debug.Log("New Display Connected. Show Display Option Menu....");
     }
+
+
 }

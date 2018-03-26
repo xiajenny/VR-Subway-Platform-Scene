@@ -286,6 +286,8 @@
     <Compile Include="Assets\movetrain.cs" />
     <Compile Include="Assets\multidisplay.cs" />
     <Compile Include="Assets\openDoors.cs" />
+    <Compile Include="Assets\PerspectiveShiftL.cs" />
+    <Compile Include="Assets\PerspectiveShiftR.cs" />
     <Compile Include="Assets\train2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
