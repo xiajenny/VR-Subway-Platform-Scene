@@ -9,7 +9,8 @@ public class openDoors : MonoBehaviour {
 	private Vector3[] leftPosV;
 	private Vector3[] rightPosV;
 	private Vector3 startPos = new Vector3 (0f, 0f, 0f);
-
+	private bool doorOpen = false;
+	private float counter = 3.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,7 @@ public class openDoors : MonoBehaviour {
 		rightPosV = new Vector3[rightdoors.Length];
 		Debug.Log ("There are " + rightPosV.Length + " right door array spots");
 
-		//Debug.Log (leftdoors [1].transform.position);
+		Debug.Log ("Initialized doors");
 
 		for (int i = 0; i < leftdoors.Length; i++) 
 		{
@@ -43,7 +44,7 @@ public class openDoors : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (doorOpen) {
+		if (!doorOpen) {
 			
 			for (int i = 0; i < leftdoors.Length; i++) {
 				leftdoors [i].transform.position = Vector3.MoveTowards (leftdoors [i].transform.position, leftPosV [i], 0.5f * Time.deltaTime);
@@ -54,9 +55,18 @@ public class openDoors : MonoBehaviour {
 				rightdoors [i].transform.position = Vector3.MoveTowards (rightdoors [i].transform.position, rightPosV [i], 0.5f * Time.deltaTime);
 				//Debug.Log (leftdoors [i].transform.position);
 			}
+
+			counter -= Time.deltaTime;
+			Debug.Log (counter);
 		}
 
-		if (doorClose) {
+		if (counter == 0.0f) {
+
+			doorOpen = true;
+
+		}
+
+		if (doorOpen) {
 
 			for (int i = 0; i < leftdoors.Length; i++) {
 				leftdoors [i].transform.position = Vector3.MoveTowards (leftdoors [i].transform.position, startPos, 0.5f * Time.deltaTime);
