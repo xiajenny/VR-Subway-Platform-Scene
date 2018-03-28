@@ -44,11 +44,13 @@ public class train2 : MonoBehaviour
         //train at platform position, doors open, counting
         if (transform.position.x == 0f)
         {
+            Debug.Log("Centre platform");
+
             doorController.enabled = true;
             Debug.Log("doorController" + doorController.enabled);
 
             timer += Time.deltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
         }
 
         //train stop completion, chime
@@ -68,23 +70,27 @@ public class train2 : MonoBehaviour
             play = true;
             Debug.Log("play audio");
             transform.position = Vector3.MoveTowards(transform.position, position3, 5 * Time.deltaTime);
+            Debug.Log("Moving to end of track1");
         }
 
         //moving train to end of track
         if (timer > 15.0f)
         {
             transform.position = Vector3.MoveTowards(transform.position, position3, 5 * Time.deltaTime);
+            Debug.Log("Moving to end of track2");
         }
 
         //if count is not 0 and train is at end of track, reset count to 0, play train sound 
         if (transform.position.x == -120f && timer != 0)
         {
-            timer = 0;
+            timer = 0.0f;
             transform.position = position1;
             audio.PlayOneShot(slowsubway, 1.0f);
             play = false;
             playChime = false;
             Debug.Log("play audio");
+            Debug.Log("reset all");
+            Debug.Log(timer);
         }
 
     }

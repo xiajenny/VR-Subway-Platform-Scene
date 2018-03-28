@@ -12,8 +12,8 @@ public class openDoors : MonoBehaviour {
 	private bool doorOpen = false;
 	private float counter = 9.0f;
 
-	// Use this for initialization
-	void Start () {
+
+	void OnEnable () {
 
 		leftdoors = GameObject.FindGameObjectsWithTag ("leftdoor");
 		rightdoors = GameObject.FindGameObjectsWithTag ("rightdoor");
@@ -39,7 +39,11 @@ public class openDoors : MonoBehaviour {
 			rightPosV[i] = rightdoors[i].transform.localPosition + new Vector3 (-0.85f, 0f, 0f);
 			Debug.Log (i + " rightPos =" + rightPosV[i] + "rightdoors transPos =" + rightdoors[i].transform.localPosition);
 		}
-	}
+
+        counter = 9.0f;
+        doorOpen = false;
+        Debug.Log("doorOpen" + doorOpen);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -63,8 +67,8 @@ public class openDoors : MonoBehaviour {
 		if (counter < 0.0f) {
 
 			doorOpen = true;
-
-		}
+            Debug.Log("doorOpen" + doorOpen);
+        }
 
 		if (doorOpen) {
 
@@ -77,7 +81,16 @@ public class openDoors : MonoBehaviour {
 				rightdoors [i].transform.position = Vector3.MoveTowards (rightdoors [i].transform.position, startPos, 0.5f * Time.deltaTime);
 				//Debug.Log (leftdoors [i].transform.position);
 			}
-		}
 
-	}
+            counter -= Time.deltaTime;
+            Debug.Log(counter);
+        }
+
+        //if (leftdoors[0].transform.position == startPos && counter < -5f )
+        //{
+        //    counter = 9.0f;
+        //    doorOpen = false;
+        //}
+
+    }
 }
