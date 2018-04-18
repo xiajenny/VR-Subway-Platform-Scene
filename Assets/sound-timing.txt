@@ -1,0 +1,24 @@
+NORTHBOUND
+
+90 start
+124-5 stop at platform
+127 doors open
+141 doors close
+143 train leaves
+
+440 start
+455-9 stop at platform
+462-3 doors open
+498 doors close
+501 train leaves
+
+----------------------------
+SOUTHBOUND
+
+64 start
+102-6 stop
+118 train leaves
+
+233 start
+273 stop at platform
+294-5 train leaves

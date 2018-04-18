@@ -10,7 +10,7 @@ public class openDoors : MonoBehaviour {
 	private Vector3[] rightPosV;
 	private Vector3 startPos = new Vector3 (0f, 0f, 0f);
 	private bool doorOpen = false;
-	private float counter = 9.0f;
+	private float counter = 11.0f;
 
 
 	void OnEnable () {
@@ -48,15 +48,15 @@ public class openDoors : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (!doorOpen) {
+		if (!doorOpen && counter > 0) {
 			
 			for (int i = 0; i < leftdoors.Length; i++) {
-				leftdoors [i].transform.position = Vector3.MoveTowards (leftdoors [i].transform.position, leftPosV [i], 0.5f * Time.deltaTime);
+				leftdoors [i].transform.position = Vector3.MoveTowards (leftdoors [i].transform.position, leftPosV [i], 0.7f * Time.deltaTime);
 				//Debug.Log (leftdoors [i].transform.position);
 			}
 				
 			for (int i = 0; i < rightdoors.Length; i++) {
-				rightdoors [i].transform.position = Vector3.MoveTowards (rightdoors [i].transform.position, rightPosV [i], 0.5f * Time.deltaTime);
+				rightdoors [i].transform.position = Vector3.MoveTowards (rightdoors [i].transform.position, rightPosV [i], 0.7f * Time.deltaTime);
 				//Debug.Log (leftdoors [i].transform.position);
 			}
 
@@ -84,6 +84,9 @@ public class openDoors : MonoBehaviour {
 
             counter -= Time.deltaTime;
             Debug.Log(counter);
+
+            if (rightdoors[0].transform.position.x == 0)
+                doorOpen = false;
         }
 
         //if (leftdoors[0].transform.position == startPos && counter < -5f )
