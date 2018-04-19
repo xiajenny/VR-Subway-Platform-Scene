@@ -10,7 +10,7 @@ public class openDoors : MonoBehaviour {
 	private Vector3[] rightPosV;
 	private Vector3 startPos = new Vector3 (0f, 0f, 0f);
 	private bool doorOpen = false;
-	private float counter = 11.0f;
+	private float counter = 12.5f;
 
 
 	void OnEnable () {
@@ -40,7 +40,7 @@ public class openDoors : MonoBehaviour {
 			Debug.Log (i + " rightPos =" + rightPosV[i] + "rightdoors transPos =" + rightdoors[i].transform.localPosition);
 		}
 
-        counter = 9.0f;
+        counter = 12.5f;
         doorOpen = false;
         Debug.Log("doorOpen" + doorOpen);
     }

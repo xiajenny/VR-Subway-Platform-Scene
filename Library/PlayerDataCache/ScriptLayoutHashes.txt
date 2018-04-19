@@ -145,4 +145,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ab9ecd92a51db02d6a8ebfef0beb1075 Assembly-CSharp.dll:.PerspectiveShiftL
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.northboundtrain
 ab9ecd92a51db02d6a8ebfef0beb1075 Assembly-CSharp.dll:.PerspectiveShiftR
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.openDoors2
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.southboundtrain

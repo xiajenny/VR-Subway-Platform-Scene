@@ -287,8 +287,10 @@
     <Compile Include="Assets\multidisplay.cs" />
     <Compile Include="Assets\northboundtrain.cs" />
     <Compile Include="Assets\openDoors.cs" />
+    <Compile Include="Assets\openDoors2.cs" />
     <Compile Include="Assets\PerspectiveShiftL.cs" />
     <Compile Include="Assets\PerspectiveShiftR.cs" />
+    <Compile Include="Assets\southboundtrain.cs" />
     <Compile Include="Assets\train2.cs" />
   </ItemGroup>
   <ItemGroup>
