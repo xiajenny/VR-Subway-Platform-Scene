@@ -104,7 +104,7 @@ public class northboundtrain : MonoBehaviour
             doorsOpened = false;
         }
 
-        if (timer >= 421f && atPlatform == false)
+        if (timer >= 422f && atPlatform == false)
         {
             if (timer < 452)
                 transform.position = Vector3.MoveTowards(transform.position, platformPosition, 8 * Time.deltaTime);
@@ -114,7 +114,7 @@ public class northboundtrain : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, platformPosition, 4 * Time.deltaTime);
             else if (timer < 455)
                 transform.position = Vector3.MoveTowards(transform.position, platformPosition, 3 * Time.deltaTime);
-            else if (timer < 457)
+            else if (timer < 456)
                 transform.position = Vector3.MoveTowards(transform.position, platformPosition, 2 * Time.deltaTime);
             else
                 transform.position = Vector3.MoveTowards(transform.position, platformPosition, 1 * Time.deltaTime);
