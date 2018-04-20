@@ -294,7 +294,7 @@
     <Compile Include="Assets\train2.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\openDoorsbckup.txt" />
+    <None Include="Assets\openDoorsbackup.txt" />
     <None Include="Assets\sound-timing.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
